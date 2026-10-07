@@ -1,0 +1,90 @@
+/* Hallmark · tokens · theme: custom · vibe: "late-night video rental, CRT red, tape hiss"
+ * axes: dark / pixel-display (bitmap) / warm (red ~25°)
+ */
+@font-face {
+  font-family: "Rental 5x7";
+  src: url("../fonts/rental-5x7.woff2") format("woff2");
+  font-display: swap;
+}
+
+:root {
+  color-scheme: dark;
+
+  /* Paper — dark, tinted toward the VHS red anchor. Elevation gets lighter. */
+  --color-paper:    oklch(14% 0.012 25);
+  --color-paper-2:  oklch(17.5% 0.014 25);
+  --color-paper-3:  oklch(21% 0.015 25);
+
+  /* Ink */
+  --color-ink:      oklch(94% 0.008 60);
+  --color-ink-2:    oklch(80% 0.010 45);
+  --color-muted:    oklch(66% 0.012 30);
+
+  /* Rules */
+  --color-rule:     oklch(30% 0.012 25);
+  --color-rule-2:   oklch(25% 0.012 25);
+
+  /* Accent — VHS red (#e5383b). Used for the REC dot, the buy button, focus and small marks only. */
+  --color-accent:     oklch(62% 0.19 25);
+  --color-accent-hi:  oklch(68% 0.19 25);
+  --color-accent-ink: oklch(14% 0.012 25);
+  --color-focus:      oklch(72% 0.20 25);
+
+  /* Deep shade, used through color-mix() for overlays (never as a flat fill). */
+  --color-shade:    oklch(8% 0.01 25);
+
+  /* Type */
+  --font-display: "Rental 5x7", ui-monospace, monospace;
+  --font-body:    "Geist", ui-sans-serif, sans-serif;
+  --font-mono:    "Geist Mono", ui-monospace, monospace;
+
+  /* Body scale (major third) */
+  --text-xs:   0.8rem;
+  --text-sm:   0.9rem;
+  --text-base: 1rem;
+  --text-md:   1.125rem;
+  --text-lg:   1.3rem;
+
+  /* Pixel-font sizes: multiples of 8 px keep every bitmap pixel on whole device pixels. */
+  --pixel-xs:   1rem;    /* 16 */
+  --pixel-sm:   1.5rem;  /* 24 */
+  --pixel-md:   2rem;    /* 32 */
+  --pixel-lg:   2.5rem;  /* 40 */
+  --pixel-xl:   3.5rem;  /* 56 */
+  --pixel-2xl:  4.5rem;  /* 72 */
+
+  /* Spacing (4 pt) */
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs:  0.5rem;
+  --space-sm:  0.75rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 9rem;
+
+  --page-gutter: clamp(1rem, 4vw, 3rem);
+  --page-max:    75rem;
+  --measure:     62ch;
+
+  /* Rules & radii */
+  --rule-hair:   1px;
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-pill: 999px;
+
+  /* Motion */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:     cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro:   120ms;
+  --dur-short:   220ms;
+  --dur-long:    420ms;
+
+  /* Layers */
+  --z-base:   1;
+  --z-raised: 10;
+  --z-sticky: 200;
+}

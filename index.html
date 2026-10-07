@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Retro Horror Camera Kit · PS1 and VHS effects for Unity 6 URP · Midnight Rental</title>
+  <meta name="description" content="PS1 and VHS camera effects for Unity 6 URP: pixelation, dither, tape damage, CRT glass and a camcorder date stamp. Built on Render Graph, driven by Volumes, set up from one window.">
+  <meta name="theme-color" content="#1a1012">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Retro Horror Camera Kit · Midnight Rental">
+  <meta property="og:description" content="PS1 and VHS camera effects for Unity 6 URP. 16 looks, 6 retro skies, full source.">
+  <meta property="og:url" content="https://midnightrental.github.io/">
+  <meta property="og:image" content="https://midnightrental.github.io/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/rental-5x7.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600&family=Geist+Mono:wght@400&display=swap">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!--
+    Before going live, replace in this file:
+      · PRICE        "$24.99" (nav button, hero, footer)
+      · GUMROAD URL  https://midnightrental.gumroad.com/l/retro-horror-camera-kit (nav button, hero, footer)
+  -->
+
+  <header class="wrap nav">
+    <a class="wordmark" href="./" aria-label="Midnight Rental, home"><span class="rec-dot" aria-hidden="true">&#9679;</span> Midnight Rental</a>
+    <a class="btn btn--buy btn--small" href="https://midnightrental.gumroad.com/l/retro-horror-camera-kit">Buy<span class="nav__price">&nbsp;· $24.99</span></a>
+  </header>
+
+  <main id="main">
+    <section class="wrap hero" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <h1 id="hero-title" class="reveal" style="--i: 0">Make it look like 1998.</h1>
+        <p class="hero__lede reveal" style="--i: 1">
+          <strong>Retro Horror Camera Kit</strong> gives a Unity 6 URP camera the PS1 and VHS treatment:
+          low resolution, 15-bit color, tape damage, CRT glass and a camcorder date stamp.
+          Every setting is a Volume override; one window sets it all up.
+        </p>
+        <div class="hero__actions reveal" style="--i: 2">
+          <a class="btn btn--buy" href="https://midnightrental.gumroad.com/l/retro-horror-camera-kit">Buy on Gumroad · $24.99</a>
+          <a class="link" href="assets/docs/RetroHorrorKit_Documentation.pdf">Read the docs (PDF)</a>
+        </div>
+        <p class="hero__meta mono reveal" style="--i: 3">Unity 6.0+ · URP 17.0+ · Render Graph · C# and HLSL source</p>
+      </div>
+      <figure class="hero__shot reveal" style="--i: 1">
+        <img src="assets/img/hero-found-footage.jpg" width="1600" height="900"
+             alt="A dark brick corridor seen through a camcorder: blinking red REC in the corner, the time 11:47 PM and the date October 31, 1998 burned into the picture, a tracking band rolling across the frame.">
+      </figure>
+    </section>
+
+    <section class="wrap section" aria-labelledby="compare-title">
+      <div class="section__head">
+        <h2 id="compare-title">Same scene. Different decade.</h2>
+        <p>Left: URP out of the box. Right: the <em>PS1 Survival Horror</em> look, 270 lines, 15-bit color and the 4×4 Bayer dither the PlayStation used. Drag across the picture.</p>
+      </div>
+      <figure class="compare" id="compare">
+        <img src="assets/img/compare-before.jpg" width="960" height="540" alt="The demo corridor rendered by URP without the kit: smooth, clean edges.">
+        <img class="compare__after" src="assets/img/compare-after.jpg" width="960" height="540" alt="The same corridor with the PS1 Survival Horror look: chunky pixels, reduced colors, ordered dither.">
+        <span class="compare__line" aria-hidden="true"></span>
+        <span class="compare__handle" aria-hidden="true">&lt;&gt;</span>
+        <span class="compare__label compare__label--before" aria-hidden="true">URP</span>
+        <span class="compare__label compare__label--after" aria-hidden="true">PS1 SURVIVAL HORROR</span>
+        <input class="compare__range" type="range" min="0" max="100" value="50" aria-label="Compare: drag left to see more of the PS1 look, right to see more of plain URP">
+      </figure>
+      <p class="compare-note mono muted">The corridor, its materials and both demo scenes ship with the kit.</p>
+    </section>
+
+    <section class="wrap section" aria-labelledby="looks-title">
+      <div class="section__head">
+        <h2 id="looks-title">Sixteen looks, one click each.</h2>
+        <p>Pick one in the Setup Window and it lands on a global Volume. Every look below is the same camera in the same corridor, so you can compare them directly. Duplicate one and make it yours.</p>
+      </div>
+      <div class="looks">
+        <figure class="look look--lead"><img src="assets/img/looks/ps1-survival-horror.jpg" width="640" height="360" loading="lazy" alt="PS1 Survival Horror look"><figcaption><span class="look__name">PS1 Survival Horror</span><span class="look__desc">240p, 15-bit color, dither, soft vignette. The classic.</span></figcaption></figure>
+        <figure class="look"><img src="assets/img/looks/found-footage1998.jpg" width="640" height="360" loading="lazy" alt="Found Footage 1998 look"><figcaption><span class="look__name">Found Footage 1998</span><span class="look__desc">Camcorder tape, clock starting Oct. 31 1998, 23:47.</span></figcaption></figure>
+        <figure class="look"><img src="assets/img/looks/cctv.jpg" width="640" height="360" loading="lazy" alt="CCTV look"><figcaption><span class="look__name">CCTV</span><span class="look__desc">Black-and-white security feed with timestamp.</span></figcaption></figure>
+        <figure class="look"><img src="assets/img/looks/haunted-tape.jpg" width="640" height="360" loading="lazy" alt="Haunted Tape look"><figcaption><span class="look__name">Haunted Tape</span><span class="look__desc">Tracking errors, noise and bleed, PAUSE label.</span></figcaption></figure>
+        <figure class="look"><img src="assets/img/looks/late-night-channel.jpg" width="640" height="360" loading="lazy" alt="Late Night Channel look"><figcaption><span class="look__name">Late Night Channel</span><span class="look__desc">80s broadcast on a curved CRT, PLAY label.</span></figcaption></figure>
+        <figure class="look"><img src="assets/img/looks/ps1-clean.jpg" width="640" height="360" loading="lazy" alt="PS1 Clean look"><figcaption><span class="look__name">PS1 Clean</span><span class="look__desc">240p and 15-bit color without dither.</span></figcaption></figure>
+        <figure class="look"><img src="assets/img/looks/ps1-nightmare.jpg" width="640" height="360" loading="lazy" alt="PS1 Nightmare look"><figcaption><span class="look__name">PS1 Nightmare</span><span class="look__desc">160p, heavy color reduction, grain.</span></figcaption></figure>
+        <figure class="look"><img src="assets/img/looks/pixel-purist.jpg" width="640" height="360" loading="lazy" alt="Pixel Purist look"><figcaption><span class="look__name">Pixel Purist</span><span class="look__desc">Pixelation only, nothing else.</span></figcaption></figure>
+        <figure class="look"><img src="assets/img/looks/found-footage.jpg" width="640" height="360" loading="lazy" alt="Found Footage look"><figcaption><span class="look__name">Found Footage</span><span class="look__desc">REC with the player’s real date and time.</span></figcaption></figure>
+        <figure class="look"><img src="assets/img/looks/old-crt-monitor.jpg" width="640" height="360" loading="lazy" alt="Old CRT Monitor look"><figcaption><span class="look__name">Old CRT Monitor</span><span class="look__desc">Strong curvature, scanlines, vignette.</span></figcaption></figure>
+        <figure class="look"><img src="assets/img/looks/arcade-cabinet.jpg" width="640" height="360" loading="lazy" alt="Arcade Cabinet look"><figcaption><span class="look__name">Arcade Cabinet</span><span class="look__desc">240p on a curved arcade screen, bloom.</span></figcaption></figure>
+        <figure class="look"><img src="assets/img/looks/console-on-tv.jpg" width="640" height="360" loading="lazy" alt="Console On TV look"><figcaption><span class="look__name">Console On TV</span><span class="look__desc">A PS1 game on a living-room CRT.</span></figcaption></figure>
+        <figure class="look"><img src="assets/img/looks/cursed-rental.jpg" width="640" height="360" loading="lazy" alt="Cursed Rental look"><figcaption><span class="look__name">Cursed Rental</span><span class="look__desc">Worn rental tape, heavy color bleed.</span></figcaption></figure>
+        <figure class="look"><img src="assets/img/looks/nightmare-broadcast.jpg" width="640" height="360" loading="lazy" alt="Nightmare Broadcast look"><figcaption><span class="look__name">Nightmare Broadcast</span><span class="look__desc">A signal barely holding together.</span></figcaption></figure>
+        <figure class="look"><img src="assets/img/looks/liminal-dream.jpg" width="640" height="360" loading="lazy" alt="Liminal Dream look"><figcaption><span class="look__name">Liminal Dream</span><span class="look__desc">Soft, bloomy, lightly dithered.</span></figcaption></figure>
+        <figure class="look"><img src="assets/img/looks/subtle-retro.jpg" width="640" height="360" loading="lazy" alt="Subtle Retro look"><figcaption><span class="look__name">Subtle Retro</span><span class="look__desc">A hint of retro for games that want less.</span></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="wrap section" aria-labelledby="box-title">
+      <div class="section__head">
+        <h2 id="box-title">What’s on the tape.</h2>
+        <p>Full-screen effects run after URP’s own post-processing. Settings you leave off cost nothing: their code is compiled out, and an inactive effect adds no render pass.</p>
+      </div>
+      <table class="spec">
+        <tbody>
+          <tr><th scope="row">PSX</th><td>Pixelation with perfectly even pixels, 15-bit style color reduction, 4×4 Bayer ordered dither.</td><td class="mono">Volume</td></tr>
+          <tr><th scope="row">VHS / CRT</th><td>Chroma bleed, chromatic offset, tracking errors, head-switching noise, tape grain, scanlines, CRT curvature, vignette.</td><td class="mono">Volume</td></tr>
+          <tr><th scope="row">Camcorder</th><td>Blinking REC, PLAY or PAUSE, and the player’s real date or one you choose, burned into the tape with a built-in bitmap font.</td><td class="mono">Volume</td></tr>
+          <tr><th scope="row">PSX Lit</th><td>Vertex jitter, affine texture warping, and per-vertex lighting that works with Forward+. Per-pixel mode for shadowed flashlights.</td><td class="mono">Material</td></tr>
+          <tr><th scope="row">Retro Sky</th><td>Procedural skybox: striped synthwave sun, cratered moon, stars, clouds, a PS1 low-res mode, and blending into your scene fog.</td><td class="mono">Material</td></tr>
+          <tr><th scope="row">Neon Grid</th><td>A glowing floor whose lines stay clean in the distance instead of shimmering.</td><td class="mono">Material</td></tr>
+          <tr><th scope="row">Setup</th><td>One window adds the effects to every URP renderer in the project, then applies looks and skies.</td><td class="mono">Editor</td></tr>
+          <tr><th scope="row">Extras</th><td>Two demo scenes with live preset switching, and a 22-page PDF manual.</td><td class="mono">Included</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="wrap section" aria-labelledby="skies-title">
+      <div class="section__head">
+        <h2 id="skies-title">Six skies to match.</h2>
+        <p>Each sky remembers the scene fog it was made for and applies it with one click, so the floor fades into the horizon instead of ending at a hard line.</p>
+      </div>
+      <div class="skies">
+        <figure class="skies__shot">
+          <img src="assets/img/shots/synthwave-late-night.jpg" width="1280" height="720" loading="lazy" alt="A neon pink grid floor running to a striped synthwave sun, seen on a curved CRT with scanlines and a PLAY label.">
+          <figcaption class="muted">Synthwave Sunset with the Neon Grid, seen through Late Night Channel.</figcaption>
+        </figure>
+        <ul class="sky-list">
+          <li><img src="assets/img/skies/synthwave-sunset.jpg" width="640" height="360" loading="lazy" alt=""><span>Synthwave Sunset</span></li>
+          <li><img src="assets/img/skies/pastel-vaporwave.jpg" width="640" height="360" loading="lazy" alt=""><span>Pastel Vaporwave</span></li>
+          <li><img src="assets/img/skies/ps1-dusk.jpg" width="640" height="360" loading="lazy" alt=""><span>PS1 Dusk</span></li>
+          <li><img src="assets/img/skies/night-stars.jpg" width="640" height="360" loading="lazy" alt=""><span>Night Stars</span></li>
+          <li><img src="assets/img/skies/blood-moon.jpg" width="640" height="360" loading="lazy" alt=""><span>Blood Moon</span></li>
+          <li><img src="assets/img/skies/overcast-fog.jpg" width="640" height="360" loading="lazy" alt=""><span>Overcast Fog</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="wrap section" aria-labelledby="setup-title">
+      <div class="section__head">
+        <h2 id="setup-title">Rolling in three steps.</h2>
+      </div>
+      <ol class="steps">
+        <li>
+          <div>
+            <h3>Import the package</h3>
+            <p>Drop it into a Unity 6 project that uses URP. No other packages needed.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Add the effects</h3>
+            <p>Open <span class="path">Tools › Retro Horror Kit › Setup Window</span> and click <strong>Add Missing Renderer Features</strong>. It covers the renderers of every quality level, PC and mobile alike.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Pick a look</h3>
+            <p>Apply a look and, if you like, a sky. Then tweak any setting on the Volume, or drive it from code as the player loses their nerve.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="wrap section" aria-labelledby="faq-title">
+      <div class="section__head">
+        <h2 id="faq-title">Before you rewind.</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Which Unity versions does it support?</summary>
+          <p>Unity 6.0 LTS or newer, with URP 17.0 or newer. Tested on 6.0 and 6.3. The kit is written for Render Graph; URP Compatibility Mode isn’t supported.</p>
+        </details>
+        <details>
+          <summary>Built-in pipeline or HDRP?</summary>
+          <p>No. It’s made for the Universal Render Pipeline only.</p>
+        </details>
+        <details>
+          <summary>Forward, Forward+ or Deferred?</summary>
+          <p>Forward and Forward+, both tested. Deferred hasn’t been tested yet; the docs list what to expect there.</p>
+        </details>
+        <details>
+          <summary>Which platforms has it been tested on?</summary>
+          <p>Windows with DirectX 12: Unity 6.0 and 6.3 in the editor, and a 6.3 player build. Mobile, consoles, WebGL and VR haven’t been tested yet. The code accounts for VR, but it isn’t verified, so it isn’t promised.</p>
+        </details>
+        <details>
+          <summary>Does it need other assets or packages?</summary>
+          <p>No. Only URP. The demo scenes use the Input System package when your project has it and fall back to the old Input Manager when it doesn’t.</p>
+        </details>
+        <details>
+          <summary>Do I get the source code?</summary>
+          <p>Yes. All C# and HLSL is included and commented, so you can read it, change it and learn from it.</p>
+        </details>
+        <details>
+          <summary>Can I use it in commercial games?</summary>
+          <p>Yes, in as many of your games as you like. You can’t resell or redistribute the kit itself, on its own or as part of another asset.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <p class="foot__line">Somebody left the tape running.</p>
+    <div class="foot__buy">
+      <a class="btn btn--buy" href="https://midnightrental.gumroad.com/l/retro-horror-camera-kit">Buy on Gumroad · $24.99</a>
+      <a class="link" href="assets/docs/RetroHorrorKit_Documentation.pdf">Read the docs (PDF)</a>
+    </div>
+    <div class="foot__meta">
+      <span class="wordmark"><span class="rec-dot" aria-hidden="true">&#9679;</span> Midnight Rental</span>
+      <span>© 2026 Midnight Rental. Unity is a trademark of Unity Technologies.</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/compare.js" defer></script>
+</body>
+</html>
